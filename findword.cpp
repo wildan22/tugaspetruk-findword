@@ -28,6 +28,40 @@ main(){
 			cout<<puzzle[i][j]<<" ";
 		}
 		cout<<endl;
+	}				
+	
+	cin>>input;
+	p_kata=strlen(input);					
+										
+	for (int i=0;i<15;i++){
+		for (int j=0;j<15;j++){
+			if (input[0]==puzzle[i][j]){
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i+k][j]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==p_kata-1){
+					kata_ditemukan+=1;
+				}
+				else{
+					kata_ditemukan+=0;
+				}
+				cek=0;
+			}
+		}
+	}
+			
+	if(kata_ditemukan>0){
+		cout<<"ADA";
+	}
+	else {
+		cout<<"TIDAK ADA";
 	}					
+
+}
 
 }
