@@ -87,6 +87,24 @@ main(){
 					kata_ditemukan+=0;
 				}
 				cek=0;
+				//Vertikal ATAS ^
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i-k][j]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+					
+				}
+				if (cek==p_kata-1){
+					kata_ditemukan+=1;
+				}
+				
+				else{
+					kata_ditemukan+=0;
+				}
+				cek=0;
 			}
 		}
 	}
