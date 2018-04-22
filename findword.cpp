@@ -35,8 +35,8 @@ main(){
 										
 	for (int i=0;i<15;i++){
 		for (int j=0;j<15;j++){
-			//HORIZONTAL KANAN ->
 			if (input[0]==puzzle[i][j]){
+				
 				///HORIZONTAL KANAN ->
 				for (int k=0;k<p_kata;k++){
 					if (input[k]==puzzle[i][j+k]){
@@ -54,8 +54,7 @@ main(){
 				}
 				cek=0;
 			
-			//VERTIKAL BAWAH V	
-			if (input[0]==puzzle[i][j]){
+				//VERTIKAL BAWAH V	
 				for (int k=0;k<p_kata;k++){
 					if (input[k]==puzzle[i+k][j]){
 						cek=k;
@@ -74,7 +73,7 @@ main(){
 			}
 		}
 	}
-	}
+
 				
 	if(kata_ditemukan>0){
 		cout<<"ADA";
