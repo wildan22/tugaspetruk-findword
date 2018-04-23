@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-main(){
-	int p_kata,cek,kata_ditemukan;
+main () {
+	int p_kata, cek, kata_ditemukan;
 	kata_ditemukan=0;
 	char input[100];
 	char puzzle[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
