@@ -1,3 +1,9 @@
+/*Nama Kelompok :
+Wildan Mutaqin 1717051037
+Kasandra Cahyani 1717051027
+Selviana Densemina DP 1717051074*/
+
+
 #include <iostream>
 #include <cstring>
 using namespace std;
