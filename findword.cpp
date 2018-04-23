@@ -190,7 +190,7 @@ int findword(char *(input))
 int main()
 {
 	int p_kata,cek,kata_ditemukan,batas;
-	cout<<"Batas : ";
+	cout<<"Banyak Kata : ";
 	cin>>batas;
 	char puzzle[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 						{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
@@ -224,4 +224,10 @@ int main()
 	for (int i=0;i<batas;i++){
 		cin>>input[i];
 		}
+		
+	//Output N Kata	
+	for (int i=0;i<batas;i++){
+		findword(*(input+i));
+		
+	}	
 }
