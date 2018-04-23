@@ -3,10 +3,10 @@
 using namespace std;
 
 
-//FUNGSI CARI KATA
+///FUNGSI CARI KATA
 int findword(char *(input))
 {
-	int p_kata, cek, kata_ditemukan;
+	int p_kata,cek,kata_ditemukan;
 	kata_ditemukan=0;
 	p_kata=strlen(input);					
 	char puzzle[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
@@ -25,144 +25,143 @@ int findword(char *(input))
 						{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 						{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}
 						};			
-	for (int i=0;i<15;i++) {
-		for (int j=0;j<15;j++) {
-			if (input[0]==puzzle[i][j]) {
-				
-				//HORIZONTAL KANAN ->
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i][j+k]) {
+	for (int i=0;i<15;i++){
+		for (int j=0;j<15;j++){
+			if (input[0]==puzzle[i][j]){
+				///HORIZONTAL KANAN ->
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i][j+k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//HORIZONTAL KIRI <-
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i][j-k]) {
+				///HORIZONTAL KIRI <-
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i][j-k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 								
-				//VERTIKAL BAWAH V
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i+k][j]) {
+				///VERTIKAL BAWAH V
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i+k][j]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//Vertikal ATAS ^
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i-k][j]) {
+				///Vertikal ATAS ^
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i-k][j]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 					
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
 				
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//DIAGONAL KIRI ATAS ^
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i-k][j-k]) {
+				///DIAGONAL KIRI ATAS ^
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i-k][j-k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//DIAGONAL KANAN ATAS ^
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i-k][j+k]) {
+				///DIAGONAL KANAN ATAS ^
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i-k][j+k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//DIAGONAL KIRI BAWAH
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i+k][j-k]) {
+				///DIAGONAL KIRI BAWAH
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i+k][j-k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
 				
-				//DIAGONAL KANAN BAWAH
-				for (int k=0;k<p_kata;k++) {
-					if (input[k]==puzzle[i+k][j+k]) {
+				///DIAGONAL KANAN BAWAH
+				for (int k=0;k<p_kata;k++){
+					if (input[k]==puzzle[i+k][j+k]){
 						cek=k;
 					}
-					else {
+					else{
 						break;
 					}
 				}
-				if (cek==p_kata-1) {
+				if (cek==p_kata-1){
 					kata_ditemukan+=1;
 				}
-				else {
+				else{
 					kata_ditemukan+=0;
 				}
 				cek=0;
@@ -172,7 +171,7 @@ int findword(char *(input))
 		}
 	}
 	
-	if(kata_ditemukan>0) {
+	if(kata_ditemukan>0){
 		cout<<"ADA"<<endl;
 	}
 	else {
@@ -181,10 +180,10 @@ int findword(char *(input))
 }
 
 
-//PROGRAM INTI
+////PROGRAM INTI
 int main()
 {
-	int p_kata, cek, kata_ditemukan, batas;
+	int p_kata,cek,kata_ditemukan,batas;
 	cout<<"Batas : ";
 	cin>>batas;
 	char puzzle[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
@@ -203,11 +202,20 @@ int main()
 						{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 						{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}
 						};
-	for(int i=0;i<15;i++) {
-		for (int j=0;j<15;j++) {
+	for(int i=0;i<15;i++){
+		for (int j=0;j<15;j++){
 			cout<<puzzle[i][j]<<" ";
 		}
 		cout<<endl;
 	}
 	cout<<endl;
+	
+	char input[batas][15];
+	
+
+	
+	//Input N Kata
+	for (int i=0;i<batas;i++){
+		cin>>input[i];
+		}
 }
